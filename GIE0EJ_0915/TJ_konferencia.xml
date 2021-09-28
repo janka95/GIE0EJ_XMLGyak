@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <konferencia>
-    <cím>Fő út 15.</cím>
-    <hallgatók>
-        <hallgató>
-            <név>Gipsz Jakab</név>
-            <lakcím>3300 Miskolc, Avas utca 8.</lakcím>
-        </hallgató>
-        <hallgató>
-            <név>Okos Tóni</név>
-            <lakcím>3300 Miskolc, Havas út 3.</lakcím>
-        </hallgató>
-    </hallgatók>
-    <helyszín>Fsz./2.</helyszín>
-    <előadó>
-        <név>Nagy Tamás</név>
-        <adószám>1234-56-78</adószám>
-        <lakcím>3200 Miskolc, Egyetem utca 21.</lakcím>
-    </előadó>
-    <dátum>2021.09.30.</dátum>
+    <cim>Fő út 15.</cim>
+    <hallgatok>
+        <hallgato>
+            <nev>Gipsz Jakab</nev>
+            <lakcim>3300 Miskolc, Avas utca 8.</lakcim>
+        </hallgato>
+        <hallgato>
+            <nev>Okos Tóni</nev>
+            <lakcim>3300 Miskolc, Havas út 3.</lakcim>
+        </hallgato>
+    </hallgatok>
+    <helyszin>Fsz./2.</helyszin>
+    <eloado>
+        <nev>Nagy Tamás</nev>
+        <adoszam>1234-56-78</adoszam>
+        <lakcim>3200 Miskolc, Egyetem utca 21.</lakcim>
+    </eloado>
+    <datum>2021.09.30.</datum>
 </konferencia>
