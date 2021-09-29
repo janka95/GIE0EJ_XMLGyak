@@ -1,0 +1,9 @@
+<!DOCTYPE konyv
+[
+        <!ELEMENT konyv (cim, ev, kiado, szerzo+)>
+        <!ATTLIST konyv id ID #REQUIRED>
+        <!ELEMENT cim (#PCDATA)>
+        <!ELEMENT ev (#PCDATA)>
+        <!ELEMENT kiado (#PCDATA)>
+        <!ELEMENT szerzo (#PCDATA)>
+]>
