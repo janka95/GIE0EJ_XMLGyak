@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE konyv SYSTEM "TJ_konyv.dtd">
-
-<konyv id="k1">
-	<cim>XML lépésről lépésre</cim>
-	<ev>2002</ev>
-	<kiado>SZAK KIADÓ KFT.</kiado>
-	<szerzo>Michael J. Young</szerzo>
-</konyv>
+<konyvek>
+	<konyv id="k1">
+		<cim>XML lépésről lépésre</cim>
+		<ev>2002</ev>
+		<kiado>SZAK KIADÓ KFT.</kiado>
+		<szerzo>Michael J. Young</szerzo>
+	</konyv>
+</konyvek>
