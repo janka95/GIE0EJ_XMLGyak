@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE minta SYSTEM "TJ_ertodtd.dtd">
+
+<modell>
+    <A Aa="aa1">
+        <Ab>
+            <Abx></Abx>
+            <Aby></Aby>
+        </Ab>
+        <Ab>
+            <Abx></Abx>
+            <Aby></Aby>
+        </Ab>
+        <Ac>
+            <Acd></Acd>
+            <Ace></Ace>
+        </Ac>
+    </A>
+    <A Aa="aa2">
+        <Ab>
+            <Abx></Abx>
+            <Aby></Aby>
+        </Ab>
+        <Ab>
+            <Abx></Abx>
+            <Aby></Aby>
+        </Ab>
+        <Ac>
+            <Acd></Acd>
+            <Ace></Ace>
+        </Ac>
+    </A>
+    <B Ba="ba1" Bc="bc1">
+        <Bb>
+            <Bbx></Bbx>
+            <Bby></Bby>
+        </Bb>
+    </B>
+    <C Ca="ca1">
+        <Cb></Cb>
+    </C>
+    <A_B A_B_a="aba1" A_B_b="abb1">
+        <A_Bc></A_Bc>
+    </A_B>
+    <A_B A_B_a="aba2" A_B_b="abb2">
+        <A_Bc></A_Bc>
+    </A_B>
+</modell>
