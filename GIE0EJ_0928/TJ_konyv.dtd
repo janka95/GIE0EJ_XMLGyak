@@ -1,3 +1,4 @@
+<!ELEMENT konyvek (konyv+)>
 <!ELEMENT konyv (cim, ev, kiado, szerzo+)>
 <!ATTLIST konyv id ID #REQUIRED>
         <!ELEMENT cim (#PCDATA)>
