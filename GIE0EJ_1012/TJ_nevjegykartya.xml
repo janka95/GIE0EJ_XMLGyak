@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<nevjegykartyak xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:noNamespaceSchemaLocation="nevjegykartya.xsd">
+    <nevjegykartya id="n1">
+        <nev>Nagy Tamás</nev>
+        <ceg>
+        	<nev>Tech Kft.</nev>
+            <cim>
+                <iranyitoszam>3529</iranyitoszam>
+                <varos>Miskolc</varos>
+                <utca>Fő utca</utca>
+                <hazszam>20</hazszam>
+            </cim>
+            <telefonszam >0630764392</telefonszam>
+            <weblap>www.techkft.hu</weblap>
+        </ceg>
+        <beosztas>szoftverfejlesztő</beosztas>
+        <telefonszam >0620234573</telefonszam>
+        <email>nagy.tamas@gmail.com</email>
+    </nevjegykartya>
+    
+    <nevjegykartya id="n2">
+        <nev>Kiss László</nev>
+        <ceg>
+        	<nev>Tech Kft.</nev>
+            <cim>
+                <iranyitoszam>3529</iranyitoszam>
+                <varos>Miskolc</varos>
+                <utca>Alsó utca</utca>
+                <hazszam>12</hazszam>
+            </cim>
+            <telefonszam >0630764392</telefonszam>
+            <weblap>www.techkft.hu</weblap>
+        </ceg>
+        <beosztas>rendszergazda</beosztas>
+        <telefonszam >0670394622</telefonszam>
+        <email>kiss.laszlo@gmail.com</email>
+    </nevjegykartya>
+    
+</nevjegykartyak>
