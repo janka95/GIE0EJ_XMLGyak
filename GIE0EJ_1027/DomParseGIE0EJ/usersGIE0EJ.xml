@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <users xmlns:xsi="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="usersGIE0EJ.xsd"> -->
+
+<users>
+	<user id="1">
+		<firstname>Janka</firstname>
+		<lastname>Tamás</lastname>
+		<profession>developer</profession>
+	</user>
+	<user id="2">
+		<firstname>Kiss</firstname>
+		<lastname>Petra</lastname>
+		<profession>HR</profession>
+	</user>
+	<user id="3">
+		<firstname>Nagy</firstname>
+		<lastname>László</lastname>
+		<profession>CTO</profession>
+	</user>
+</users>

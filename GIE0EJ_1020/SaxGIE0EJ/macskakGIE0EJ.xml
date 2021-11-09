@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- <macskak xmlns:xsi="http://www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="macskakGIE0EJ.xsd">  -->
+<macskak>    
+    <macska id="1">
+        <nev>Picur</nev>
+        <kor>3</kor>
+        <fajta>Házimacska</fajta>
+    </macska>
+    <macska id="2">
+        <nev>Cirmi</nev>
+        <kor>1</kor>
+        <fajta>Szfinx</fajta>
+    </macska>
+    <macska id="3">
+        <nev>Bundás</nev>
+        <kor>7</kor>
+        <fajta>Perzsa</fajta>
+    </macska>
+</macskak>
