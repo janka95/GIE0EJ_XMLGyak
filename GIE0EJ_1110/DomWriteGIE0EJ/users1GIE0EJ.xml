@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<users xmlns="domvuxfks">
+  <user id="1">
+    <firstname>Janka</firstname>
+    <lastname>Tamás</lastname>
+    <profession>programmer</profession>
+  </user>
+  <user id="2">
+    <firstname>Petra</firstname>
+    <lastname>Kiss</lastname>
+    <profession>HR</profession>
+  </user>
+  <user id="3">
+    <firstname>László</firstname>
+    <lastname>Nagy</lastname>
+    <profession>CTO</profession>
+  </user>
+</users>

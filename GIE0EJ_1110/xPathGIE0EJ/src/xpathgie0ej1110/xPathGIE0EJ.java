@@ -1,8 +1,6 @@
 package xpathgie0ej1110;
 
 
-
-
 import java.io.File;
 import java.io.IOException;
 
@@ -39,6 +37,34 @@ public class xPathGIE0EJ {
 		XPath xPath = XPathFactory.newInstance().newXPath();
 		
 		String expression = "class";
+		
+		//student id=1
+		//String expression = "class/student[@id=01]";
+				
+		//összes student
+		//String expression = "class/student";
+				
+		//2. student
+		//String expression = "class/student[position()=2]";
+				
+		//utolsó student
+		//String expression = "class/student[last()]";
+				
+		//uelõtti student
+		//String expression = "class/student[last()-1]";
+				
+		//elsõ 2 student
+		//String expression = "class/student[position()<3]";
+				
+		//minden gyerek
+		//String expression = "//*";
+				
+		//legalább 1 tulajdonság
+		//String expression = "class/student[@*]";
+				
+		//20 év felettiek
+		//String expression = "class/student[kor>20]";
+		
 		
 		NodeList nodeList = (NodeList) xPath.compile(expression).evaluate(document, XPathConstants.NODESET);
 		
