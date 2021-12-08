@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+elementFormDefault="qualified"
+attributeFormDefault="qualified">
+
+<xs:element name="kapukod" type="xs:integer"/>
+<xs:element name="ir_szam" type="xs:integer"/>
+<xs:element name="telepules" type="xs:string"/>
+<xs:element name="utca_hazszam" type="xs:string"/>
+<xs:element name="agynemu" type="xs:string"/>
+<xs:element name="idopont" type="xs:date"/>
+<xs:element name="nev" type="xs:string"/>
+<xs:element name="szem_ig_szam" type="xs:string"/>
+<xs:element name="mobilszam" type="xs:string"/>
+<xs:element name="k_datum" type="xs:date"/>
+<xs:element name="z_datum" type="xs:date"/>
+<xs:element name="fo" type="xs:integer"/>
+<xs:element name="utlevel_sz" type="xs:string"/>
+<xs:element name="telefonszam" type="xs:string"/>
+
+<xs:attribute name="lakas_ID" type="xs:integer"/>
+<xs:attribute name="takarito_ID" type="xs:integer"/>
+<xs:attribute name="lakas_IDREF" type="xs:integer"/>
+<xs:attribute name="takarito_IDREF" type="xs:integer"/>
+<xs:attribute name="foglalas_ID" type="xs:integer"/>
+<xs:attribute name="vendeg_IDREF" type="xs:integer"/>
+<xs:attribute name="vendeg_ID" type="xs:integer"/>
+
+<xs:complexType name="cim_tipus">
+	<xs:sequence>
+		<xs:element ref="ir_szam"/>
+		<xs:element ref="telepules"/>
+		<xs:element ref="utca_hazszam"/>
+	</xs:sequence>
+</xs:complexType>
+
+
+
+<xs:complexType name="lakasok_tipus">
+	<xs:sequence>
+		<xs:element name="lakas" type="lakas_tipus" maxOccurs="unbounded"/>
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="takaritasok_tipus">
+	<xs:sequence>
+		<xs:element name="takaritas" type="takaritas_tipus" maxOccurs="unbounded"/>
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="takaritok_tipus">
+	<xs:sequence>
+		<xs:element name="takarito" type="takarito_tipus" maxOccurs="unbounded"/>
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="foglalasok_tipus">
+	<xs:sequence>
+		<xs:element name="foglalas" type="foglalas_tipus" maxOccurs="unbounded"/>
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="vendegek_tipus">
+	<xs:sequence>
+		<xs:element name="vendeg" type="vendeg_tipus" maxOccurs="unbounded"/>
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="vendeg_tipus">
+	<xs:sequence>
+		<xs:element ref="nev"/>
+		<xs:element ref="telefonszam" maxOccurs="unbounded"  />
+		<xs:element ref="utlevel_sz"/>
+	</xs:sequence>
+	<xs:attribute ref="vendeg_ID" use="required"/>	
+</xs:complexType>
+
+<xs:complexType name="foglalas_tipus">
+	<xs:sequence>
+		<xs:element ref="k_datum" />
+		<xs:element ref="z_datum" />
+		<xs:element ref="fo" />
+	</xs:sequence>
+	<xs:attribute ref="foglalas_ID" use="required"/>
+	<xs:attribute ref="lakas_IDREF" use="required"/>
+	<xs:attribute ref="takarito_IDREF" use="required"/>
+	<xs:attribute ref="vendeg_IDREF" use="required"/>
+</xs:complexType>
+
+<xs:complexType name="takarito_tipus">
+	<xs:sequence>
+		<xs:element ref="nev" />
+		<xs:element ref="szem_ig_szam" />
+		<xs:element ref="mobilszam" />
+	</xs:sequence>
+	<xs:attribute ref="takarito_ID" use="required"/>
+</xs:complexType>
+
+<xs:complexType name="takaritas_tipus">
+	<xs:sequence>
+		<xs:element ref="idopont" />
+	</xs:sequence>
+	<xs:attribute ref="takarito_IDREF" use="required"/>
+	<xs:attribute ref="lakas_IDREF" use="required"/>
+</xs:complexType>
+
+<xs:complexType name="lakas_tipus">
+	<xs:sequence>
+		<xs:element ref="kapukod" />
+		<xs:element name="cim" type="cim_tipus" />
+		<xs:element ref="agynemu" />
+	</xs:sequence>
+	<xs:attribute ref="lakas_ID" use="required"/>
+</xs:complexType>
+
+
+<xs:element name="airbnblakasoktakaritasa">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="lakasok" type="lakasok_tipus"/>
+			<xs:element name="takaritasok" type="takaritasok_tipus"/>
+			<xs:element name="takaritok" type="takaritok_tipus"/>
+			<xs:element name="foglalasok" type="foglalasok_tipus"/>
+			<xs:element name="vendegek" type="vendegek_tipus"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:key name="lakas_PK">
+		<xs:selector xpath="lakasok/lakas"/>
+		<xs:field xpath="@lakas_ID"/>
+	</xs:key>
+	<xs:key name="takarito_PK">
+		<xs:selector xpath="takaritok/takarito"/>
+		<xs:field xpath="@takarito_ID"/>
+	</xs:key>
+	<xs:key name="foglalas_PK">
+		<xs:selector xpath="foglalasok/foglalas"/>
+		<xs:field xpath="@foglalas_ID"/>
+	</xs:key>
+	<xs:key name="vendeg_PK">
+		<xs:selector xpath="vendegek/vendeg"/>
+		<xs:field xpath="@vendeg_ID"/>
+	</xs:key>
+	
+	<xs:keyref name="t_lakas_FK" refer="lakas_PK">
+		<xs:selector xpath="takaritasok/takaritas"/>
+		<xs:field xpath="@lakas_IDREF"/>
+	</xs:keyref>
+	<xs:keyref name="t_takarito_FK" refer="takarito_PK">
+		<xs:selector xpath="takaritasok/takaritas"/>
+		<xs:field xpath="@takarito_IDREF"/>
+	</xs:keyref>
+	<xs:keyref name="f_lakas_FK" refer="lakas_PK">
+		<xs:selector xpath="foglalasok/foglalas"/>
+		<xs:field xpath="@lakas_IDREF"/>
+	</xs:keyref>
+	<xs:keyref name="f_takarito_FK" refer="takarito_PK">
+		<xs:selector xpath="foglalasok/foglalas"/>
+		<xs:field xpath="@takarito_IDREF"/>
+	</xs:keyref>
+	<xs:keyref name="vendeg_FK" refer="vendeg_PK">
+		<xs:selector xpath="foglalasok/foglalas"/>
+		<xs:field xpath="@vendeg_IDREF"/>
+	</xs:keyref>
+</xs:element> 
+</xs:schema>

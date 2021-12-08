@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<airbnblakasoktakaritasa xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="XMLSchemaGIE0EJ.xsd">
+	<lakasok>
+		<lakas lakas_ID="1">
+			<kapukod>2345</kapukod>
+			<cim>
+				<ir_szam>1065</ir_szam>
+				<telepules>Budapest</telepules>
+				<utca_hazszam>Révay utca 8</utca_hazszam>
+			</cim>
+			<agynemu>szimpla</agynemu>
+		</lakas>
+		<lakas lakas_ID="2">
+			<kapukod>3456</kapukod>
+			<cim>
+				<ir_szam>1061</ir_szam>
+				<telepules>Budapest</telepules>
+				<utca_hazszam>Andrássy út 23</utca_hazszam>
+			</cim>
+			<agynemu>dupla</agynemu>
+		</lakas>
+		<lakas lakas_ID="3">
+			<kapukod>4585</kapukod>
+			<cim>
+				<ir_szam>1051</ir_szam>
+				<telepules>Budapest</telepules>
+				<utca_hazszam>Zrínyi utca 4</utca_hazszam>
+			</cim>
+			<agynemu>szimpla</agynemu>
+		</lakas>
+	</lakasok>
+	<takaritasok>
+		<takaritas lakas_IDREF="1" takarito_IDREF="3">
+			<idopont>2021-12-01</idopont>
+		</takaritas >
+		<takaritas lakas_IDREF="3" takarito_IDREF="2">
+			<idopont>2021-12-04</idopont>
+		</takaritas >
+		<takaritas lakas_IDREF="2" takarito_IDREF="1">
+			<idopont>2021-12-06</idopont>
+		</takaritas >
+	</takaritasok>
+	<takaritok>
+		<takarito takarito_ID="1">
+			<nev>Kiss Mária</nev>
+			<szem_ig_szam>231456PA</szem_ig_szam>
+			<mobilszam>06308573245</mobilszam>
+		</takarito>
+		<takarito takarito_ID="2">
+			<nev>Nagy Katalin</nev>
+			<szem_ig_szam>463782EE</szem_ig_szam>
+			<mobilszam>06204563998</mobilszam>
+		</takarito>
+		<takarito takarito_ID="3">
+			<nev>Szabó Péter</nev>
+			<szem_ig_szam>125478LD</szem_ig_szam>
+			<mobilszam>06703456787</mobilszam>
+		</takarito>
+	</takaritok>
+	<foglalasok>
+		<foglalas foglalas_ID="1" lakas_IDREF="1" takarito_IDREF="3"  vendeg_IDREF="1">
+			<k_datum>2021-11-29</k_datum>
+			<z_datum>2021-12-01</z_datum>
+			<fo>3</fo>
+		</foglalas>
+		<foglalas foglalas_ID="2" lakas_IDREF="3" takarito_IDREF="2"  vendeg_IDREF="2">
+			<k_datum>2021-12-03</k_datum>
+			<z_datum>2021-12-04</z_datum>
+			<fo>2</fo>
+		</foglalas>
+		<foglalas foglalas_ID="3" lakas_IDREF="2" takarito_IDREF="1"  vendeg_IDREF="3">
+			<k_datum>2021-12-04</k_datum>
+			<z_datum>2021-12-06</z_datum>
+			<fo>2</fo>
+		</foglalas>
+	</foglalasok>
+	<vendegek>
+		<vendeg vendeg_ID="1">
+			<nev>John Smith</nev>
+			<telefonszam>+223456785</telefonszam>
+			<telefonszam>06304567855</telefonszam>
+			<utlevel_sz>234567AA</utlevel_sz>
+		</vendeg>
+		<vendeg vendeg_ID="2">
+			<nev>Nagy Tamás</nev>
+			<telefonszam>06702874956</telefonszam>
+			<utlevel_sz>475839BD</utlevel_sz>
+		</vendeg>
+		<vendeg vendeg_ID="3">
+			<nev>Kovács Piroska</nev>
+			<telefonszam>06303455443</telefonszam>
+			<telefonszam>061223678</telefonszam>
+			<utlevel_sz>347656PL</utlevel_sz>
+		</vendeg>
+	</vendegek>
+</airbnblakasoktakaritasa>
